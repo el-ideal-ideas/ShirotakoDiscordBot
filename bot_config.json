@@ -1,0 +1,10 @@
+{
+    "__MocaConfig__": "Welcome to MocaConfig, the config module is now available.",
+    "__MocaConfig_version__": "2.0.2",
+    "__config_instance_name__": "bot_config",
+    "__moca_config_access_token__": "",
+    "__private__": false,
+    "debug": false,
+    "show_responder": false,
+    "token": ""
+}
