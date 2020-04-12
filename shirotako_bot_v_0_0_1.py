@@ -19,7 +19,6 @@
 
 import discord
 from moca_config import MocaConfig
-from moca_core import get_children_file_list
 from pathlib import Path
 from moca_bot import MocaBot
 
@@ -43,8 +42,9 @@ shirotako_bot = MocaBot('shirotako')
 
 # -- Setup Bot --------------------------------------------------------------------------
 
-for data_file in get_children_file_list(Path(__file__).parent.joinpath('twitter_data')):
-    shirotako_bot.study_from_file(data_file, True)
+for data_file in Path(__file__).parent.joinpath('twitter_data').iterdir():
+    if data_file.is_file():
+        shirotako_bot.study_from_file(data_file, True)
 
 # -------------------------------------------------------------------------- Setup Bot --
 
